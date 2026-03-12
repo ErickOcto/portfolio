@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Nunito_Sans, Public_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Nunito_Sans, Public_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider"
 
-const publicSans = Public_Sans({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", publicSans.variable)} suppressHydrationWarning>
+    <html lang="en" className={cn("font-sans", inter.variable)} suppressHydrationWarning>
       <body>
           <ThemeProvider
             attribute="class"
